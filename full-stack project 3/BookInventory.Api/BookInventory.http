@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:5080
+@bookId = 1
+
+### List books
+GET {{baseUrl}}/api/books
+
+### Add a book (use the returned ID below)
+POST {{baseUrl}}/api/books
+Content-Type: application/json
+
+{"title":"The Hobbit","author":"J. R. R. Tolkien","publicationYear":1937,"quantity":5}
+
+### Get one book
+GET {{baseUrl}}/api/books/{{bookId}}
+
+### Replace all editable fields
+PUT {{baseUrl}}/api/books/{{bookId}}
+Content-Type: application/json
+
+{"title":"The Hobbit","author":"J. R. R. Tolkien","publicationYear":1937,"quantity":8}
+
+### Invalid input: 400
+POST {{baseUrl}}/api/books
+Content-Type: application/json
+
+{"title":" ","author":"","publicationYear":0,"quantity":-1}
+
+### Delete the book
+DELETE {{baseUrl}}/api/books/{{bookId}}
+
+### Deleted or missing book: 404
+GET {{baseUrl}}/api/books/{{bookId}}

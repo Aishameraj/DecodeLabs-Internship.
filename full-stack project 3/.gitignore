@@ -1,0 +1,19 @@
+**/bin/
+**/obj/
+.vs/
+.vscode/
+*.user
+*.suo
+*.mdf
+*.ldf
+*.bak
+*.log
+.env
+.env.*
+**/appsettings.Local.json
+**/appsettings.*.local.json
+TestResults/
+.tools/
+tmp/
+Full Stack P3.pdf
+pdf-review.png
